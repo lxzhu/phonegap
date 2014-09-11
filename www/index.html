@@ -27,20 +27,43 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquerymobile/jquery.mobile-1.4.3.min.css"/>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.mobile-1.4.3.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>		
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
+       <div data-role="page" id="home">
+		 <div role="main" class="ui-content">
+			 <div class=" ui-grid-b">
+				<div class="ui-block-a"><a class="ui-btn" href="#jqm-page-header-footer">jQuery Mobile 页面头尾</a></div>
+				<div class="ui-block-b"><a class="ui-btn">jQuery Mobile 页面生命周期</a></div>		   
+			 </div>
+			<div class=" ui-grid-b">
+				<div class="ui-block-a"><a class="ui-btn">PhoneGap 设备信息</a></div>
+				<div class="ui-block-b"><a class="ui-btn">PhoneGap 本地文件读写</a></div>
+				<div class="ui-block-c"><a class="ui-btn">PhoneGap 调用网络服务</a></div>
+				<div class="ui-block-a"><a class="ui-btn">PhoneGap 下载网络文件</a></div>
+				<div class="ui-block-b"><a class="ui-btn">PhoneGap 拍照和相片浏览 </a></div>		   
+				<div class="ui-block-c"><a class="ui-btn">PhoneGap 加速度检测</a></div>
+				<div class="ui-block-a"><a class="ui-btn">PhoneGap GPS位置检测</a></div>		   
+				<div class="ui-block-b"><a class="ui-btn">PhoneGap 状态保存和恢复</a></div>
+				<div class="ui-block-c"><a class="ui-btn">PhoneGap 读取联系人</a></div>
+				<div class="ui-block-a"><a class="ui-btn">PhoneGap 读取短信</a></div>
+				<div class="ui-block-b"><a class="ui-btn">PhoneGap 读取通话记录</a></div>
+				<div class="ui-block-c"><a class="ui-btn">PhoneGap Notification</a></div>
+				<div class="ui-block-a"><a class="ui-btn">PhoneGap 录音和音频播放</a></div>
+				<div class="ui-block-b"><a class="ui-btn">PhoneGap 录像和视频播放</a></div>
+			</div>
+		 </div>
+	   </div>      
+       <div data-role="page" id="jqm-page-header-footer">
+		<div data-role="header" data-position="fixed" class="ui-bar">
+			<a href="" class="ui-btn ui-btn-left" data-icon="arrow-l" data-rel="back">回退</a>
+			<h1>header and footer</h1>			
+		</div>
+	   </div>	   
     </body>
 </html>
